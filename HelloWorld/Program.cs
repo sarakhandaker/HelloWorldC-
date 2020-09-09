@@ -9,8 +9,7 @@ namespace HelloWorld
             Person john = new Person();
             john.FirstName = "john";
             john.LastName = "smith";
-            Arrays test = new Arrays();
-            test.Exercise2();
+            Strings.Exercise2();
         }
 
     }

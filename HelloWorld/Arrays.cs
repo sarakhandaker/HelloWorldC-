@@ -13,22 +13,16 @@ namespace HelloWorld
 
         public void Exercise1()
         {
-            Console.WriteLine("Enter your name");
-            string answer = Console.ReadLine();
 
             List<string> friends= new List<string>();
 
-            if ()
+            while (true)
             {
-                Console.WriteLine("Enter your name");
-            }
-            else if ()
-            {
-                Console.WriteLine("Enter your name");
-            }
-            else
-            {
-                Console.WriteLine("Enter your name");
+                Console.Write("Type a name (or hit ENTER to quit): ");
+                var input = Console.ReadLine();
+                if (String.IsNullOrWhiteSpace(input))
+                    break;
+                friends.Add(input);
             }
         }
 
@@ -51,8 +45,18 @@ namespace HelloWorld
 
         public void Exercise3()
         {
-            Console.WriteLine("Enter your name");
-            string answer = Console.ReadLine();
+            int[] numbers = new int[5];
+
+            for(int i=0; i<5; i++)
+            {
+                //Console.Write("Type a number: ");
+                //int input = Convert.ToInt32(Console.ReadLine());
+                //if (Array.IndexOf(numbers,input))
+                //var input = Console.ReadLine();
+                //if (String.IsNullOrWhiteSpace(input))
+                //    break;
+                //friends.Add(input);
+            }
         }
 
         //4 - Write a program and ask the user to continuously enter a number or type "Quit" to exit.
@@ -60,8 +64,24 @@ namespace HelloWorld
 
         public void Exercise4()
         {
-            Console.WriteLine("Enter your name");
-            string answer = Console.ReadLine();
+            var numbers = new List<int>();
+
+            while (true)
+            {
+                Console.Write("Enter a number (or 'Quit' to exit): ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
+                    break;
+
+                numbers.Add(Convert.ToInt32(input));
+            }
+            var uniques = new List<int>();
+            foreach (var number in numbers)
+            {
+                if (!uniques.Contains(number))
+                    uniques.Add(number);
+            }
         }
 
         //5 - Write a program and ask the user to supply a list of comma separated numbers(e.g 5, 1, 9, 2, 10).
