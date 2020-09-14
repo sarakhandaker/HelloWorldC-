@@ -6,10 +6,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Person john = new Person();
-            john.FirstName = "john";
-            john.LastName = "smith";
-            Strings.Exercise2();
+            var customer = new Customer();
+            Console.WriteLine(customer.Id);
         }
 
     }
