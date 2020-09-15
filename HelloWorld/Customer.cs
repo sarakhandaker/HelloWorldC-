@@ -7,13 +7,9 @@ namespace HelloWorld
     {
         public int Id;
         public string Name;
-        public List<Orders> Orders;
-        public Customer()
-        {
-            Orders = new List<Orders>();
-        }
+        public readonly List<Orders> Orders = new List<Orders>();
+
         public Customer(int id)
-            :this()
         {
             this.Id = id;
         }
@@ -21,6 +17,10 @@ namespace HelloWorld
              : this(id)
         {
             this.Name = name;
+        }
+        public void Promote()
+        {
+
         }
 
     }
