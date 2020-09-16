@@ -27,7 +27,7 @@ namespace HelloWorld
             }
         }
 
-        private int CalculateRating()
+        protected int CalculateRating()
         {
             return 0;
         }

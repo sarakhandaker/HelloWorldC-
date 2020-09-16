@@ -3,8 +3,9 @@ namespace HelloWorld
 {
     public class Car : Vehicle
     {
-        public Car()
+        public Car(string reg) :base(res)
         {
+            Console.WriteLine("Car is being initialized");
         }
     }
 }
