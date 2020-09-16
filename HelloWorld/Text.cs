@@ -1,10 +1,16 @@
 ﻿using System;
 namespace HelloWorld
 {
-    public class Text
+    public class Text : PresentationObject
     {
-        public Text()
+        public int FontSize { get; set; }
+        public string FrontName { get; set; }
+
+        public void AddHyperLink (string link)
         {
+            Console.WriteLine("link");
         }
     }
+
+
 }

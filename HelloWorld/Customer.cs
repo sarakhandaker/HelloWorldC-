@@ -9,18 +9,27 @@ namespace HelloWorld
         public string Name;
         public readonly List<Orders> Orders = new List<Orders>();
 
-        public Customer(int id)
-        {
-            this.Id = id;
-        }
-        public Customer(int id, string name)
-             : this(id)
-        {
-            this.Name = name;
-        }
+        //public Customer(int id)
+        //{
+        //    this.Id = id;
+        //}
+        //public Customer(int id, string name)
+        //     : this(id)
+        //{
+        //    this.Name = name;
+        //}
         public void Promote()
         {
+            var rating = CalculateRating();
+            if (rating == 0)
+            {
+                Console.WriteLine("Promoted");
+            }
+        }
 
+        private int CalculateRating()
+        {
+            return 0;
         }
 
     }
