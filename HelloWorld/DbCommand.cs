@@ -8,8 +8,11 @@ namespace HelloWorld
 
         public DbCommand(DbConnection connect, string instruction)
         {
-            if (connect == null || instruction==null || instruction=="")
+            if (connect == null || String.IsNullOrWhiteSpace(instruction))
+            {
                 throw new InvalidOperationException("Connection is Null");
+            }
+
             this.Connection = connect;
             this.Instruction = instruction;
         }

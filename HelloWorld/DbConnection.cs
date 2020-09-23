@@ -42,7 +42,7 @@ namespace HelloWorld
 
         public DbConnection(string connection)
         {
-            if (connection==null || connection== "")
+            if (String.IsNullOrWhiteSpace(connection))
                 throw new InvalidOperationException("ConnectionString is Null");
             this.ConnectionString = connection;
         }
